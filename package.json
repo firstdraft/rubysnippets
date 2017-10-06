@@ -1,0 +1,22 @@
+{
+  "name": "rubysnippets",
+  "description": "Ruby custom snippet",
+  "version": "0.0.1",
+  "author": "Murugan",
+  "contributors": [
+    {
+      "name": "Murugan",
+      "email": "murugan@firstdraft.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/firstdraft/cloud9"
+  },
+  "plugins": {
+    "rubysnippets": {}
+  },
+  "permissions": "world",
+  "categories": ["miscellaneous"],
+  "licenses": ["MIT"]
+}
