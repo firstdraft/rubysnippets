@@ -1,6 +1,73 @@
 # scope: ruby
 
-snippet =loop
-        ${1:array}.each do |${2:member}|
-          ${3}
-        end
+snippet each
+  ${1:array_of_things}.each do |${2:individual_thing}|
+    ${0:$2}
+  end
+
+snippet route
+  get("/${1:address_visited}", { :controller => "${2:containing_class}", :action => "${0:method_to_execute}" })
+
+snippet home
+  root("${1:controller}#${0:action}")
+
+snippet if
+  if ${1:condition}
+    ${0:# instructions to execute if condition is true}
+  end
+
+snippet ife
+  if ${1:condition}
+    ${2:# instructions to execute if condition is true}
+  else
+    ${0:# instructions to execute if condition is false}
+  end
+
+snippet ifee
+  if ${1:first_condition}
+    ${2:# instructions to execute if first condition is true}
+  elsif ${3:second_condition}
+    ${4:# instructions to execute if first condition is false and second condition is true}
+  else
+    ${0:# instructions to execute if all conditions are false}
+  end
+
+snippet def
+  def ${1:method_name}
+    ${0:# instructions to execute}
+  end
+
+snippet do
+  do |${1:block_variable_name}|
+    ${0:$1}
+  end
+
+snippet class
+  class ${1:TheNameOfTheClassInCamelCase}
+    ${0}
+  end
+
+snippet upto
+  ${1:10}.times do |${2:the_number}|
+    ${0:$2}
+  end
+
+snippet downto
+  ${1:10}.downto(${2:1}) do |${3:the_number}|
+    ${0:$3}
+  end
+
+snippet step
+  (${1:100}..${2:200}).step(${3:5}) do |${4:the_number}|
+    ${0:$4}
+  end
+
+snippet render
+  render(
+    {
+      :template => "${1:view_folder}/${2:template_file}.html.erb",
+      :locals => {
+        :${3:template_local_var} => ${0:value_to_send}
+      }
+    }
+  )

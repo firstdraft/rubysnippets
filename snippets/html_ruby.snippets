@@ -1,0 +1,62 @@
+# scope: html_ruby
+
+snippet each
+  <% ${1:array_of_things}.each do |${2:individual_thing}| %>
+    <${3:li}>
+      ${0:$2}
+    </$3>
+  <% end %>
+
+snippet %=
+  <%= ${0} %>
+
+snippet %
+  <% ${0} %>
+
+snippet if
+  <% if ${1:condition} %>
+    <${2:p}>
+      <%= ${0:"Something to display if condition is true"} %>
+    </$2>
+  <% end %>
+
+snippet ife
+  <% if ${1:first_condition} %>
+    <${2:p}>
+      <%= ${2:"Something to display if condition is true"} %>
+    </$2>
+  <% else %>
+    <$2>
+      <%= ${0:"Something to display if condition is false"} %>
+    </$2>
+  <% end %>
+
+snippet ifee
+  <% if ${1:first_condition} %>
+    <${2:p}>
+      <%= ${3:"Something to display if first condition is true"} %>
+    </$2>
+  <% elsif ${4:second_condition} %>
+    <$2>
+      <%= ${5:"Something to display if first condition is false and second condition is true"} %>
+    </$2>
+  <% else %>
+    <$2>
+      <%= ${0:"Something to display if all conditions are false"} %>
+    </$2>
+  <% end %>
+
+snippet upto
+  <% ${1:10}.times do |${2:the_number}| %>
+    <%= ${0:$2} %>
+  <% end %>
+
+snippet downto
+  <% ${1:10}.downto(${2:1}) do |${3:the_number}| %>
+    <%= ${0:$3} %>
+  <% end %>
+
+snippet step
+  <% (${1:100}..${2:200}).step(${3:5}) do |${4:the_number}| %>
+    <%= ${0:$4} %>
+  <% end %>
