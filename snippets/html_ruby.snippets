@@ -60,3 +60,15 @@ snippet step
   <% (${1:100}..${2:200}).step(${3:5}) do |${4:the_number}| %>
     <%= ${0:$4} %>
   <% end %>
+
+snippet render
+  <%=
+    render(
+      {
+        :partial => "${1:view_folder}/${2:partial_without_underscore_or_extension}",
+        :locals => {
+          :${3:partial_local_variable} => ${0:value_to_send},
+        }
+      }
+    )
+  %>
